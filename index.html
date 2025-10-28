@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Text Manipulator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div>
+        <bold>Home</bold>
+      </div>
+      <button id="themeToggle">Disable Dark Mode</button>
+    </nav>
+
+    <div class="container">
+      <h1>Text Manipulator</h1>
+
+      <label for="textInput" class="form-label"
+        >Enter the Text to Analyze Below</label
+      >
+      <textarea id="textInput" placeholder="Enter your text here..."></textarea>
+
+      <div class="btn-group">
+        <button onclick="convertToUpper()">Convert to Uppercase</button>
+        <button onclick="convertToLower()">Convert to Lowercase</button>
+        <button onclick="clearText()">Clear Text</button>
+        <button onclick="copyText()">Copy Text</button>
+        <button onclick="removeExtraSpaces()">Remove Extra Spaces</button>
+      </div>
+
+      <div class="summary">
+        <h2>Your Text Summary</h2>
+        <p id="wordCount">0 words and 0 characters</p>
+        <p id="readTime">0 minutes read</p>
+      </div>
+
+      <div class="preview">
+        <h2>Preview</h2>
+        <p id="previewText">
+          Enter something in the textbox above to preview it here
+        </p>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
