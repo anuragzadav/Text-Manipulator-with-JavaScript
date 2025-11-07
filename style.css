@@ -1,7 +1,7 @@
-/* Default dark mode */
+/* Default light mode */
 body {
-  background-color: #0d1117;
-  color: #c9d1d9;
+  background-color: #e7ecef;
+  color: #24292f;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   margin: 0;
   padding: 20px;
@@ -20,16 +20,16 @@ button {
   border-radius: 6px;
   cursor: pointer;
   font-size: 14px;
-  background-color: #238636;
+  background-color: #274c77;
   color: white;
 }
 
 button:hover {
-  background-color: #2ea043;
+  background-color: #6096ba;
 }
 
 nav {
-  background-color: #21262d;
+  background-color: #6096ba;
   padding: 10px 20px;
   border-radius: 6px;
   margin-bottom: 20px;
@@ -38,9 +38,10 @@ nav {
   align-items: center;
 }
 
-nav a,
+#home,
 nav button {
-  color: #58a6ff;
+  color: white;
+  font-weight: bolder;
   text-decoration: none;
   background: none;
   border: none;
@@ -50,9 +51,9 @@ nav button {
   font-size: 14px;
 }
 
-nav a:hover,
+#home:hover,
 nav button:hover {
-  background-color: #30363d;
+  background-color: #a3cef1;
 }
 
 .container {
@@ -61,7 +62,7 @@ nav button:hover {
 }
 
 h1 {
-  color: #f0f6fc;
+  color: #1f2f16;
   text-align: center;
 }
 
@@ -69,7 +70,7 @@ h1 {
   display: block;
   margin-bottom: 5px;
   font-weight: bold;
-  color: #f0f6fc;
+  color: black;
 }
 
 textarea {
@@ -78,115 +79,168 @@ textarea {
   padding: 12px;
   border: 1px solid #30363d;
   border-radius: 6px;
-  background-color: #161b22;
-  color: #c9d1d9;
+  background-color: #a3cef1;
+  color: black;
   font-size: 14px;
   resize: vertical;
   box-sizing: border-box;
 }
 
 textarea::placeholder {
-  color: #8b949e;
+  color: whitesmoke;
 }
 
 .summary {
   margin-top: 20px;
   padding: 15px;
-  background-color: #21262d;
+  background-color: #a3cef1;
   border-radius: 6px;
   border-left: 4px solid #58a6ff;
 }
 
 .summary h2 {
   margin: 0 0 10px 0;
-  color: #f0f6fc;
+  color: white;
 }
 
 .summary p {
   margin: 5px 0;
-  color: #8b949e;
+  color: black;
 }
 
 .preview {
   margin-top: 20px;
   padding: 15px;
-  background-color: #161b22;
+  background-color: #a3cef1;
   border: 1px solid #30363d;
   border-radius: 6px;
   min-height: 100px;
-  color: #c9d1d9;
+  color: black;
 }
 
 .preview h2 {
   margin: 0 0 10px 0;
+  color: white;
+}
+
+/* Feedback Section */
+.feedback-section {
+  margin-top: 30px;
+  padding: 20px;
+  background-color: #a3cef1;
+  border-radius: 6px;
+  border-left: 4px solid #58a6ff;
+}
+
+.feedback-section h2 {
+  color: white;
+  margin: 0 0 15px 0;
+}
+
+.feedback-section input,
+.feedback-section textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.feedback-section input::placeholder,
+.feedback-section textarea::placeholder {
+  color: #999;
+}
+
+/* Dark Mode Overrides */
+body.dark {
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+body.dark nav {
+  background-color: #21262d;
+}
+
+body.dark #home,
+body.dark nav button {
+  color: white;
+}
+
+body.dark #home:hover,
+body.dark nav button:hover {
+  background-color: #a3cef1;
+}
+
+body.dark h1 {
   color: #f0f6fc;
 }
 
-/* Light mode */
-body.light {
-  background-color: #ffffff;
-  color: #24292f;
+body.dark .form-label {
+  color: #f0f6fc;
 }
 
-body.light nav {
-  background-color: #f6f8fa;
+body.dark textarea {
+  background-color: #161b22;
+  border-color: #30363d;
+  color: #c9d1d9;
 }
 
-body.light nav a,
-body.light nav button {
-  color: #060101;
+body.dark textarea::placeholder {
+  color: #8b949e;
 }
 
-body.light nav a:hover,
-body.light nav button:hover {
-  background-color: #f6f6f3;
+body.dark .summary {
+  background-color: #21262d;
+  border-left-color: #58a6ff;
 }
 
-body.light textarea {
-  background-color: #ffffff;
-  border-color: #d0d7de;
-  color: #24292f;
+body.dark .summary h2 {
+  color: #f0f6fc;
 }
 
-body.light textarea::placeholder {
-  color: #6e7781;
+body.dark .summary p {
+  color: #8b949e;
 }
 
-body.light h1 {
-  color: #24292f;
+body.dark .preview {
+  background-color: #161b22;
+  border-color: #30363d;
+  color: #c9d1d9;
 }
 
-body.light .form-label {
-  color: #24292f;
+body.dark .preview h2 {
+  color: #f0f6fc;
 }
 
-body.light .summary {
-  background-color: #f6f8fa;
-  border-left-color: #0969da;
+body.dark button {
+  background-color: #58a6ff;
 }
 
-body.light .summary h2 {
-  color: #24292f;
+body.dark button:hover {
+  background-color: #a3cef1;
 }
 
-body.light .summary p {
-  color: #57606a;
+/* Dark overrides for feedback */
+body.dark .feedback-section {
+  background-color: #21262d;
+  border-left-color: #58a6ff;
 }
 
-body.light .preview {
-  background-color: #ffffff;
-  border-color: #d0d7de;
-  color: #24292f;
+body.dark .feedback-section h2 {
+  color: #f0f6fc;
 }
 
-body.light .preview h2 {
-  color: #24292f;
+body.dark .feedback-section input,
+body.dark .feedback-section textarea {
+  background-color: #161b22;
+  border-color: #30363d;
+  color: #c9d1d9;
 }
 
-body.light button {
-  background-color: #1a7f37;
-}
-
-body.light button:hover {
-  background-color: #1f883f;
+body.dark .feedback-section input::placeholder,
+body.dark .feedback-section textarea::placeholder {
+  color: #8b949e;
 }
