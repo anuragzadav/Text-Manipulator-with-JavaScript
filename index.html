@@ -3,15 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Text Manipulator</title>
+    <title>TextUtils</title>
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <nav>
       <div>
-        <bold>Home</bold>
+        <a id="home" href="#">Home</a>
       </div>
-      <button id="themeToggle">Disable Dark Mode</button>
+      <button id="themeToggle">Enable Dark Mode</button>
     </nav>
 
     <div class="container">
@@ -41,6 +41,32 @@
         <p id="previewText">
           Enter something in the textbox above to preview it here
         </p>
+      </div>
+
+      <!-- Feedback Form (always visible) -->
+      <div class="feedback-section">
+        <h2>Feedback</h2>
+        <form onsubmit="return submitFeedback(event)">
+          <label for="feedbackEmail" class="form-label">Email:</label>
+          <input
+            type="email"
+            id="feedbackEmail"
+            placeholder="Enter your email"
+            required
+          />
+          <br /><br />
+
+          <label for="feedbackText" class="form-label">Feedback:</label>
+          <textarea
+            id="feedbackText"
+            rows="4"
+            placeholder="Share your thoughts..."
+            required
+          ></textarea>
+          <br /><br />
+
+          <button type="submit">Submit Feedback</button>
+        </form>
       </div>
     </div>
 
